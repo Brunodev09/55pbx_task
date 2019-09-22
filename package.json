@@ -1,0 +1,27 @@
+{
+  "name": "55pbx_task",
+  "version": "1.0.0",
+  "description": "Tarefa para seleção de desenvolvedor Node.js júnior/pleno.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js -e njk,html,css,js,json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImOhashi/55pbx_task.git"
+  },
+  "author": "Leonardo Ohashi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImOhashi/55pbx_task/issues"
+  },
+  "homepage": "https://github.com/ImOhashi/55pbx_task#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.0",
+    "puppeteer": "^1.20.0",
+    "socket.io": "^2.3.0"
+  }
+}
