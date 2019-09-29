@@ -1,41 +1,45 @@
 # 55pbx_task
 Tarefa para seleção de desenvolvedor Node.js júnior/pleno.
 
+# Como preparar o ambiente local
 
-# Problemática:
+__Obs:__ O projeto utiliza [Yarn](https://yarnpkg.com/lang/pt-br/docs/install/#debian-stable) e Docker Compose ([Windows](https://docs.docker.com/docker-for-windows/install/), [Linux](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt), [Mac](https://docs.docker.com/docker-for-mac/)) , se necessário, instale os mesmos.
 
-Crie uma página que receba uma URL para um site qualquer (exemplo: "www.google.com.br"). Feito isso, extraia todas as imagens do link em questão via back-end e armazene-as em um diretório qualquer (leve em consideração o consumo de memória e processamento uma vez que não há limite para a quantidade de imagens que podem ser baixadas). Armazene o link da página e o caminho de cada imagem baixada em um banco de dados e exiba na tela miniaturas destas imagens.
+## __1-__ Clone o projeto e instale as dependências:
 
-# Requisitos de resolução e entrega:
+```
+$ git clone https://github.com/ImOhashi/55pbx_task.git
+$ cd 55pbx_task
+$ [sudo] yarn
+```
 
-- Toda a comunicação entre o front-end e o back-end deve ser feita empregando a biblioteca "socket.io";
+## __2-__ Configure o usuário do Mongo Express no arquivo __docker-compose.yml__:
 
-- A tecnologia de banco de dados utilizada deve ser MongoDB;
+```
+ME_CONFIG_BASICAUTH_USERNAME: <<Nome de usuário do Mongo Express>>
+ME_CONFIG_BASICAUTH_PASSWORD: <<Senha do Mongo Express>>
+```
 
-- Todo código do back-end deve rodar em ambiente Node.js;
+O usuário e senha do container do MongoDB já estão configurados, mas caso queira reconfigurar, [siga essas recomentações](https://github.com/ImOhashi/Docker-Compose-Mongo).
 
-- O projeto deve ser versionado usando Git e é importante que seja explicado no README o passo-a-passo de como preparar/instalar e executar o projeto.
+## __3-__ Suba os containers Docker:
 
-# Diferenciais:
+O seguinte comando ira gerar as imagens dos containers Docker com o banco de dados Mongo e o SGBD Mongo Express:
 
-# Back-end:
+```
+docker-compose up -d
+```
 
-- typescript;
+## __4-__ Rode o servidor com PM2:
 
-- unit testing (jest);
+```
+yarn start
+```
 
-- pm2 configuration file;
+## __5-__ Servidores e aonde ficam as imagens baixadas:
 
-- uso de ODM (como mongoose) ou repository pattern;
+__Servidor Node:__ localhost:3000      
+__MongoDB:__ localhost:27017      
+__Mongo Express:__ localhost:8081
 
-# Front-end:
-
-- react + redux;
-
-# Diretrizes de avaliação:
-
-- estrutura do código;
-
-- padronização e nomenclatura;
-
-- tratativa de fluxo assíncrono;
+__As imagens baixadas:__ src/images
