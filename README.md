@@ -19,3 +19,17 @@ ME_CONFIG_BASICAUTH_PASSWORD: <<Senha do Mongo Express>>
 ```
 
 O usuário e senha do container do MongoDB já estão configurados, mas caso queira reconfigurar, [siga essas recomentações](https://github.com/ImOhashi/Docker-Compose-Mongo).
+
+## __3-__ Suba os containers Docker:
+
+O seguinte comando ira gerar as imagens dos containers Docker com o banco de dados Mongo e o SGBD Mongo Express:
+
+```
+docker-compose up -d
+```
+
+## __4-__ Rode o servidor com PM2:
+
+```
+yarn start
+```
