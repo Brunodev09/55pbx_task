@@ -36,8 +36,8 @@ yarn start
 
 ## __5-__ Servidores e aonde ficam as imagens baixadas:
 
-__Servidor Node:__ localhost:3000
-__MongoDB:__ localhost:27017
+__Servidor Node:__ localhost:3000      
+__MongoDB:__ localhost:27017      
 __Mongo Express:__ localhost:8081
 
 __As imagens baixadas:__ src/images
