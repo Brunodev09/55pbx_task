@@ -8,7 +8,7 @@ Tarefa para seleção de desenvolvedor Node.js júnior/pleno.
 ```
 $ git clone https://github.com/ImOhashi/55pbx_task.git
 $ cd 55pbx_task
-$ yarn
+$ [sudo] yarn
 ```
 
 ## __2-__ Configure o usuário do Mongo Express no arquivo __docker-compose.yml__:
@@ -33,3 +33,11 @@ docker-compose up -d
 ```
 yarn start
 ```
+
+## __5-__ Servidores e aonde ficam as imagens baixadas:
+
+__Servidor Node:__ localhost:3000
+__MongoDB:__ localhost:27017
+__Mongo Express:__ localhost:8081
+
+__As imagens baixadas:__ src/images
