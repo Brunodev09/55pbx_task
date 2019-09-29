@@ -21,13 +21,13 @@
           $('#m').val('');
           return false;
         });
+
         socket.on('receive url', function (resp) {
             console.log(resp)
             let arr = resp.images_show
             arr.forEach(element => {
                 $('#imgs').prepend($('<img>',{id:element,src:element}))
-            });
-            
+            });    
         });
       });
     </script>

@@ -27,7 +27,6 @@ io.on('connection', function (socket) {
     await found.save()
     io.emit('receive url', resp)
   })
-
 })
 
 server.listen(3000)
