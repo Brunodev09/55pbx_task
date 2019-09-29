@@ -7,7 +7,7 @@ Tarefa para seleção de desenvolvedor Node.js júnior/pleno.
 
 ```
 $ git clone https://github.com/ImOhashi/55pbx_task.git
-$ [cd] 55pbx_task
+$ cd 55pbx_task
 $ yarn
 ```
 
@@ -18,4 +18,4 @@ ME_CONFIG_BASICAUTH_USERNAME: <<Nome de usuário do Mongo Express>>
 ME_CONFIG_BASICAUTH_PASSWORD: <<Senha do Mongo Express>>
 ```
 
-O usuário e senha do container do MongoDB já está configurada, mas caso queira reconfigurar, [siga essas recomentações](https://github.com/ImOhashi/Docker-Compose-Mongo).
+O usuário e senha do container do MongoDB já estão configurados, mas caso queira reconfigurar, [siga essas recomentações](https://github.com/ImOhashi/Docker-Compose-Mongo).
