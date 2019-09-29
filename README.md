@@ -4,6 +4,9 @@ Tarefa para seleção de desenvolvedor Node.js júnior/pleno.
 __Obs:__ O projeto utiliza [Yarn](https://yarnpkg.com/lang/pt-br/docs/install/#debian-stable) e Docker Compose ([Windows](https://docs.docker.com/docker-for-windows/install/), [Linux](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt), [Mac](https://docs.docker.com/docker-for-mac/)) , se necessário, instale os mesmos.
 
 # Como preparar o ambiente local
+
+__Obs:__ O projeto utiliza [Yarn](https://yarnpkg.com/lang/pt-br/docs/install/#debian-stable) e Docker Compose ([Windows](https://docs.docker.com/docker-for-windows/install/), [Linux](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt), [Mac](https://docs.docker.com/docker-for-mac/)) , se necessário, instale os mesmos.
+
 ## __1-__ Clone o projeto e instale as dependências:
 
 ```
