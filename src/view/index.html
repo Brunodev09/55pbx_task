@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Extrator de imagem</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    
+    <form action="">
+      <input id="m" autocomplete="off" type="text"/><button>Enviar</button>
+    </form>
+    <div id="imgs"></div>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      $(function () {
+        var socket = io('http://localhost:3000');
+        $('form').submit(function(){
+          let data = $('#m').val();
+          socket.emit('send url', data);
+          $('#m').val('');
+          return false;
+        });
+        socket.on('receive url', function (resp) {
+            console.log(resp)
+            let arr = resp.images_show
+            arr.forEach(element => {
+                $('#imgs').prepend($('<img>',{id:element,src:element}))
+            });
+            
+        });
+      });
+    </script>
+  </body>
+</html>

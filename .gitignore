@@ -1,1 +1,5 @@
 /node_modules
+src/images/*
+!src/images/.gitkeep
+!src/images/favicon.ico
+test*
